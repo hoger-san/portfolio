@@ -9,18 +9,21 @@
         </time>
         <h1 class="display-2">{{ post.fields.title }}</h1>
         <p class="headline text--secondary">{{ post.fields.description }}</p>
-        <p class="body-1">{{ post.fields.body }}</p>
+        <vue-markdown class="body-1">{{ post.fields.body }}</vue-markdown>
       </article>
     </v-col>
     <v-col xs="0" sm="1" md="1" lg="2"></v-col>
   </v-row>
 </template>
 <script>
+import VueMarkdown from 'vue-markdown'
 import { createClient } from '~/plugins/contentful.js'
-
 const client = createClient()
 
 export default {
+  components: {
+    VueMarkdown
+  },
   asyncData({ env, params }) {
     return client
       .getEntries({
