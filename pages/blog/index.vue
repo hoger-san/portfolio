@@ -1,9 +1,11 @@
 <template>
   <section>
     <h2>記事一覧</h2>
-    <ul v-for="(post, index) in posts" :key="index">
-      <article-preview :post="post"></article-preview>
-    </ul>
+    <v-row>
+      <v-col v-for="(post, index) in posts" :key="index">
+        <article-preview :post="post"></article-preview>
+      </v-col>
+    </v-row>
   </section>
 </template>
 

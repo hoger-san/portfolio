@@ -1,8 +1,7 @@
 <template>
   <v-layout column justify-center align-center>
     <v-container>
-      <v-card max-width="1080px">
-        <v-img :src="person.fields.image.fields.file.url"></v-img>
+      <v-card>
         <v-card-title>
           <h1>{{ person.fields.name }}</h1>
         </v-card-title>
@@ -16,9 +15,11 @@
     </v-container>
     <v-container fluid>
       <h2>記事一覧</h2>
-      <ul v-for="(post, index) in posts" :key="index">
-        <article-preview :post="post"></article-preview>
-      </ul>
+      <v-row>
+        <v-col v-for="(post, index) in posts" :key="index">
+          <article-preview :post="post"></article-preview>
+        </v-col>
+      </v-row>
     </v-container>
   </v-layout>
 </template>
