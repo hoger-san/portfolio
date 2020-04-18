@@ -15,10 +15,10 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/markdownit": "^1.2.9",
     "babel-runtime": "^6.26.0",
     "contentful": "^7.14.2",
-    "nuxt": "^2.0.0",
-    "vue-markdown": "^2.2.4"
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",
