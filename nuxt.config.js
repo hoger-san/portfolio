@@ -62,14 +62,10 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
-  /*
-   ** vuetify module configuration
-   ** https://github.com/nuxt-community/vuetify-module
-   */
+
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -79,8 +75,18 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        }
-      }
+        },
+        light: {
+          primary: colors.blue.darken1, 
+          secondary: colors.blue.lighten4, 
+          accent: colors.indigo.base,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        },
+      },
+      dark: false
     }
   },
   /*
