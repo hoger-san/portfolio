@@ -1,6 +1,10 @@
 <template>
   <v-card max-width="400">
-    <v-img class="thumbnail" :src="post.fields.heroImage.fields.file.url">
+    <v-img
+      max-height="250"
+      class="thumbnail"
+      :src="post.fields.heroImage.fields.file.url"
+    >
     </v-img>
     <v-card-title
       ><nuxt-link
